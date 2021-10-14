@@ -1,0 +1,10 @@
+[package]
+name = "actix"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+parking_system = { path = "../../" }
+actix-web = "3"
+serde = "1"
+

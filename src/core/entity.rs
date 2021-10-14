@@ -22,3 +22,15 @@ pub struct Car<'a> {
   pub leave_date: Option<DateTime<Utc>>,
   pub parked: bool,
 }
+
+impl<'a> Car<'a> {
+  pub fn new(code: &'a str, plate: &'a str) -> Self {
+    Car {
+      code,
+      plate,
+      enter_date: Utc::now(),
+      leave_date: None,
+      parked: true,
+    }
+  }
+}
